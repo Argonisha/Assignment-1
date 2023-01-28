@@ -32,7 +32,7 @@ public class FindPrimes {
 			FileWriter writer = new FileWriter("primes.txt");
 			String writeString = (timeFinish-timeStart) + "ms " + PrimeThreading.total + " " + PrimeThreading.count;
 			writer.write(writeString+"\n");
-			for(int i = 0;i<5;i++) {
+			for(int i = 0;i<10;i++) {
 				writer.write(PrimeThreading.biggestPrimes[i]+" ");
 			}
 			writer.close();
@@ -52,8 +52,8 @@ class PrimeThreading extends Thread {
 	public static AtomicLong total = new AtomicLong(2); //the number 2 is automatically accounted for
 	public static AtomicInteger count = new AtomicInteger(1); //the number 2 is automatically accounted for
 	public static int testNum = 99999999; //starting top to bottom to fill the biggest primes easily, also not including even numbers
-	public static int biggestPrimes[] = new int[5];
-	public static int unfilledBiggest = 4;
+	public static int biggestPrimes[] = new int[10];
+	public static int unfilledBiggest = 9;
 	
 	public void run() {
 		//System.out.println("Currently in Thread: "+ this.getId());
