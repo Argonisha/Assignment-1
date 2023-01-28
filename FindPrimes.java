@@ -30,7 +30,7 @@ public class FindPrimes {
 		try {
 			File fileOut = new File("primes.txt");
 			FileWriter writer = new FileWriter("primes.txt");
-			String writeString = (timeFinish-timeStart) + "ms " + PrimeThreading.total + " " + PrimeThreading.count;
+			String writeString = (timeFinish-timeStart) + "ms " + PrimeThreading.count + " " + PrimeThreading.total;
 			writer.write(writeString+"\n");
 			for(int i = 0;i<10;i++) {
 				writer.write(PrimeThreading.biggestPrimes[i]+" ");
